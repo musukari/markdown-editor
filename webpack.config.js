@@ -19,5 +19,11 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.js',
         publicPath: 'dist/',
+    },
+    // webpack-dev-serverの設定
+    devServer: {
+        publicPath: '/dist/',
+        hot: true,
+        open: true,
     }
 }
