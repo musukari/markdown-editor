@@ -12,7 +12,7 @@ const networkFallingBackToCache = async (request) => {
     const cache = await caches.open(CacheName);
     try {
         const response = await fetch(request);
-        await cache.put(request, response.clone);
+        await cache.put(request, response.clone());
         return response;
     } catch (err) {
         console.error(err);
